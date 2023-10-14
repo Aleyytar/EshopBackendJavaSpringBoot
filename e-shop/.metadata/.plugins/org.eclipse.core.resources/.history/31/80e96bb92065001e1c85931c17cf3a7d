@@ -1,0 +1,29 @@
+package shop.demo.business.concretes;
+
+import java.util.List;
+
+import shop.demo.business.abstracts.ProductDislikeService;
+import shop.demo.business.requests.productDislikeRequests.AddProductDislikeRequest;
+import shop.demo.business.responses.productDislikeResponses.GetProductDislikeResponse;
+
+public class ProductDislikeManager implements ProductDislikeService {
+
+	@Override
+	public List<GetProductDislikeResponse> getProductDislikeByProductId(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void add(AddProductDislikeRequest addProductDislikeRequest) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

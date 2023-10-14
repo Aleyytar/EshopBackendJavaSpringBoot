@@ -1,0 +1,11 @@
+package shop.demo.business.abstracts;
+
+import java.util.List;
+
+import shop.demo.business.requests.productCommentRequests.AddProductCommentRequest;
+
+public interface ProductCommentService {
+	
+	void add(AddProductCommentRequest addProductCommentRequest);
+
+}

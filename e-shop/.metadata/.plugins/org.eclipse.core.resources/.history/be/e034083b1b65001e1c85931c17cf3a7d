@@ -1,0 +1,23 @@
+package shop.demo.business.concretes;
+
+import java.util.List;
+
+import shop.demo.business.abstracts.ProductLikeService;
+import shop.demo.business.requests.productLikeRequests.AddProductLikeRequest;
+import shop.demo.business.responses.productLikeResponses.GetProductLikeRespone;
+
+public class ProductLikeManager implements ProductLikeService {
+
+	@Override
+	public List<GetProductLikeRespone> getProductLikeByProductId(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void add(AddProductLikeRequest addProductLikeRequest) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

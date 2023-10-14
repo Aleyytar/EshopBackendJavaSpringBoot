@@ -1,0 +1,27 @@
+package shop.demo.api;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import lombok.AllArgsConstructor;
+import shop.demo.business.abstracts.ProductDislikeService;
+import shop.demo.business.responses.productDislikeResponses.GetProductDislikeResponse;
+
+@RestController
+@RequestMapping("/api/productdislikes")
+@AllArgsConstructor
+public class ProductDislikesController {
+
+	private ProductDislikeService productDislikeService;
+	
+	@GetMapping("/getproductdislikebyproductid")
+	public List<GetProductDislikeResponse> getProductDislikeByProductId(int id){
+		
+		return productDislikeService.getProductDislikeByProductId(id);
+	}
+	
+	
+}

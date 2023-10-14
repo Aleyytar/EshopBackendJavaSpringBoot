@@ -1,0 +1,9 @@
+package shop.demo.business.abstracts;
+
+import shop.demo.business.requests.productLikeRequests.AddProductLikeRequest;
+
+public interface ProductLikeService {
+	
+	void add(AddProductLikeRequest addProductLikeRequest);
+
+}

@@ -1,0 +1,7 @@
+package shop.demo.dataAccess.abstracts;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ProductCommentRepository extends JpaRepository<shop.demo.entities.concretes.ProductComment, ID> {
+
+}

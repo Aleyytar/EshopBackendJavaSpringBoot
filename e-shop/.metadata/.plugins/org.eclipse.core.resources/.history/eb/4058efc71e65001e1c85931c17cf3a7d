@@ -1,0 +1,5 @@
+package shop.demo.entities.abstracts;
+
+public class Dislike {
+
+}

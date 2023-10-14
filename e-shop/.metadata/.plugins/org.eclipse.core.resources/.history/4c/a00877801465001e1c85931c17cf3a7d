@@ -1,0 +1,9 @@
+package shop.demo.business.abstracts;
+
+import shop.demo.business.requests.productCommentRequests.AddProductCommentRequest;
+
+public interface ProductCommentService {
+	
+	void add(AddProductCommentRequest addProductCommentRequest);
+
+}

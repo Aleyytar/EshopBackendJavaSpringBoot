@@ -1,0 +1,5 @@
+package shop.demo.business.responses.productLikeResponses;
+
+public class GetProductLikeRespone {
+
+}

@@ -1,0 +1,14 @@
+package shop.demo.business.abstracts.product;
+
+import java.util.List;
+
+import shop.demo.business.requests.productCommentRequests.AddProductCommentRequest;
+import shop.demo.business.responses.productCommentResponses.GetProductCommentResponse;
+
+public interface ProductCommentService {
+	
+	List<GetProductCommentResponse> getProductCommentsByProductId(int id);
+	void add(AddProductCommentRequest addProductCommentRequest);
+	
+
+}

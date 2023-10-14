@@ -1,0 +1,5 @@
+package shop.demo.business.requests.productCategoryRequests;
+
+public class UpdateProductCategoryRequest {
+
+}

@@ -1,0 +1,5 @@
+package shop.demo.business.requests.productDislikeRequests;
+
+public class AddProductDislikeRequest {
+
+}

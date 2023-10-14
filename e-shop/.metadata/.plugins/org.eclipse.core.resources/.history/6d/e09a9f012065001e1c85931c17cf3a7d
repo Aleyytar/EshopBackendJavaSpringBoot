@@ -1,0 +1,5 @@
+package shop.demo.business.responses.productDislikeResponses;
+
+public class GetProductDislikeResponse {
+
+}

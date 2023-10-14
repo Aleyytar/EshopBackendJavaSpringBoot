@@ -1,0 +1,15 @@
+package shop.demo.business.requests.productCategoryRequests;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import shop.demo.business.responses.productCategoryResponses.GetAllProductCategoryResponse;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class AddProductCategoryRequest {
+	
+	private String name;
+
+}

@@ -1,0 +1,36 @@
+package shop.demo.business.concretes;
+
+import java.util.List;
+
+import shop.demo.business.abstracts.ProductCategoryService;
+import shop.demo.business.requests.productCategoryRequests.AddProductCategoryRequest;
+import shop.demo.business.requests.productCategoryRequests.UpdateProductCategoryRequest;
+import shop.demo.business.responses.productCategoryResponses.GetAllProductCategoryResponse;
+
+public class ProductCategoryManager implements ProductCategoryService {
+
+	@Override
+	public List<GetAllProductCategoryResponse> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void add(AddProductCategoryRequest addProductCategoryRequest) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void update(UpdateProductCategoryRequest UpdateProductCategoryRequest) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
