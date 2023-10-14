@@ -1,0 +1,83 @@
+package shop.demo.business.concretes.productManagers;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.stereotype.Service;
+
+import lombok.AllArgsConstructor;
+import shop.demo.business.abstracts.productServices.ProductService;
+import shop.demo.business.requests.productRequests.AddProductRequest;
+import shop.demo.business.responses.productResponses.GetAllProductResponse;
+import shop.demo.business.responses.productResponses.GetProductResponse;
+import shop.demo.core.utilities.mappers.ModelMapperService;
+import shop.demo.dataAccess.abstracts.ProductRepository;
+import shop.demo.entities.concretes.Product;
+
+@Service
+@AllArgsConstructor
+public class ProductManager implements ProductService {
+	
+	private ProductRepository productRepository;
+	private ModelMapperService modelMapperService;
+	
+	@Override
+	public List<GetAllProductResponse> getAll() {
+		
+		List<GetAllProductResponse> productResponseList = productRepository.findAll().stream().map(product ->
+		modelMapperService.forResponse().map(product, GetAllProductResponse.class)).collect(Collectors.toList());
+		
+		
+		return productResponseList;
+	}
+	
+	
+	@Override
+	public List<GetAllProductResponse> getProductsByProductCategoryId(int id) {
+		
+		List<GetAllProductResponse> productResponseList = productRepository.getProductsByProductCategoryId(id).stream()
+				.map(product -> modelMapperService.forResponse().map(product, GetAllProductResponse.class))
+				.collect(Collectors.toList());
+		
+		return productResponseList;
+	}
+	
+	@Override
+	public GetProductResponse getProductById(int id) {
+		
+		Product target = productRepository.findById(id).orElse(null);
+		
+		if(target != null) {
+			
+			GetProductResponse productResponse = modelMapperService.forResponse().map(target, GetProductResponse.class);
+			
+			return productResponse;
+			
+		}
+		
+		return null;
+	}
+
+	@Override
+	public void add(AddProductRequest addProductRequest) {
+		
+		Product product = modelMapperService.forRequest().map(addProductRequest, Product.class);
+		product.setId(0);
+		
+		productRepository.save(product);
+		
+		
+	}
+
+	@Override
+	public void delete(int id) {
+		
+		productRepository.deleteById(id);
+		
+	}
+
+	
+
+	
+
+}
